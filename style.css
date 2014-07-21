@@ -1,0 +1,663 @@
+/* 
+Theme Name: Sushiai
+Author: Michel Damasceno
+Author URI: http://visolutions.com.br/
+
+*/
+
+* {
+margin:0;
+
+list-style:none;
+vertical-align:baseline;
+}
+
+body
+{
+margin:0;
+padding:0 ;
+}
+
+#bg-container
+{
+	background:#CFCFCF url(img/textura3.png) ;
+	overflow:hidden;
+	 margin-bottom: -40px;
+}
+
+#bg-container-blog
+{
+background:#CFCFCF url(img/textura2.png) ;
+	overflow:hidden;
+}
+
+#bg-container-center
+{
+	background:#BD2D2E url(img/textura2.png) ;
+	overflow:hidden;
+}
+
+.details-cardapio-title
+{
+	background:url(img/detalhecardapio.png) no-repeat;
+	width: 100%;
+	height:55px;
+}
+
+.title
+{
+	font-size:36px;
+	margin-top:18px;
+	text-transform:capitalize;
+	font-family: 'Varela Round',sans-serif;
+	text-align:left;
+}
+
+.navbar-toggle
+{
+	position:relative;
+	z-index:3;
+}
+      .navbar .nav li a {
+        font-weight: bold;
+     
+		font-family: "SIMPLIFICATypeface" !important;
+		-moz-transition:all 1s;
+	    -webkit-transition:all 1s;
+		transition:all 1s;
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+	  
+	  
+@font-face {
+	font-family: "SIMPLIFICATypeface";
+	src: url("fonte/SIMPLIFICATypeface.ttf");
+	}
+
+/* ============================ TOPO*/		
+	  
+.nav > li > a {
+    font-size:36px;
+}
+
+.in ul li a
+{
+	text-align: center !important;
+}
+	  
+      /* ============================ TOPO*/	 
+	  
+.topo
+{
+   background:#202020;
+   border:1px solid #000;
+}	  
+
+  /* ============================ LOGO*/	 
+  
+.logo-img  .col-lg-12 {
+
+    width: 100%;
+}
+
+.logo  img
+{
+	text-align: center !important;
+}
+
+  /* ============================ SOCIAL*/	 
+
+#social li
+{
+   list-style:none;	
+   margin:0px 0px 20px 0px;
+}
+
+#social
+{
+   float:right;
+   margin:0px 25px 0px 0px;
+}
+
+#menu-menu
+{
+
+	 margin-bottom: 15px;
+   
+    margin-top: 25px;
+}
+
+  /* ============================ SLIDER*/	 
+
+.wraper-slide
+{
+   margin-top:49px;
+   margin-bottom: -40px;
+}
+
+.slide  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
+{
+	position: absolute !important;
+    top: 20% !important;
+    left: -130px;
+}
+
+.slide  .carousel-control .icon-prev, .carousel-control .icon-next 
+{
+	position: absolute !important;
+    top: 20% ;
+    right: -130px;
+}
+
+.slide .carousel-control .glyphicon-chevron-right
+{
+	position: absolute !important;
+	left:30px;
+}
+
+.carousel-caption h4
+{
+
+	display: none;
+}
+
+
+/* CSS used here will be applied after bootstrap.css */
+#carousel {
+    margin-top: 20px;
+}
+.item .thumb {
+	   width: 31%;
+	cursor: pointer;
+	float: left;
+	margin-right:16px;
+}
+.item .thumb img, .item img {
+	width: 100%;	
+}
+
+
+  /* ============================ feature*/	
+
+
+.feature img
+{
+	margin-bottom:27px;
+}
+
+  /* ============================ row-cardapio*/	
+
+.row-cardapio 
+{
+  
+	background:#292323;
+}
+
+  /* ============================ row-cardapio span12 */	
+
+
+
+.nav-tabs ,.tab-content{
+    border-bottom: none !important;
+}
+
+.nav-tabs > li > a, .nav-pills > li > a
+{
+	color: #fff !important;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus
+{
+    background: #EB3F3F  !important;
+	border:none !important;
+	width:100%;
+}
+
+.nav-tabs > li:hover 
+{
+     background:#FB5F5F !important;
+	 border:none !important;
+}
+.nav-tabs > li:focus
+{
+	background:#ED3237 !important;
+	border:none !important;
+}
+.nav-tabs   a:hover
+{
+	background:#FB5F5F !important;
+	border:none !important;
+}
+
+.nav-tabs > li 
+{
+    background: #999999  !important;
+	font-size:36px  !important;
+	font-family: "SIMPLIFICATypeface" !important;
+	margin-right:18px;
+}
+
+.tabs-center 
+{	
+	color:#fff !important;
+	margin-bottom:124px;
+	margin-top:98px;
+	overflow:hidden;
+	font-family: "SIMPLIFICATypeface" !important;
+}
+.tabs-center  img 
+{
+	float:left;
+	width:100%;
+	max-height:150px;
+}
+.tabs-center .col-lg-2
+{
+	margin-bottom:24px;	
+}
+
+.tabs-center p
+{
+	
+    text-align: left;
+	font-size:18px;
+	clear:both;
+	padding-top:22px;
+}
+
+.heading-post
+{
+	 text-align: center;
+}
+
+.post
+{
+	transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	margin-bottom: 24px;
+    overflow: hidden;
+	padding:10px;
+	clear:both;
+}
+
+.post:hover
+{
+ background:#362F2F;
+}
+
+.bt .col-lg-2,
+.bt .col-lg-4,
+.bt .col-lg-6
+ {
+
+  text-align: center;
+  margin-bottom:27px;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
+{
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+}
+
+.tabs-center h2
+{
+   max-width: 185px !important;
+   float:left;
+   margin:0;
+   
+}
+
+.tabs-center .col-lg-6
+{
+	padding-left:0 ;
+	padding-right:15px ;
+}
+
+.featurette-heading
+{
+
+}
+.tabs-center .col-lg-4 span 
+{
+	margin-bottom:45px;
+	float:left;
+	
+}
+
+.tabs-center img
+
+{
+		float:left;
+		-moz-border-radius: 8px 8px 8px 8px;
+	    -webkit-border-radius: 8px 8px 8px 8px;
+		border-radius: 8px 8px 8px 8px;
+				
+}		
+
+.price
+{
+	padding:0px 5px 0px 5px;
+	background:#ED3237;
+	float:right;
+	font-size:24px;
+	text-align:center;
+	overflow:hidden;
+	color:#fff;
+	position:relative;
+}
+
+
+
+  /* ============================ blog */	
+
+.blog
+
+{
+	margin:0 auto 80px ;
+	max-width:1477px !important;
+	position:relative;
+}
+
+
+
+.blog h2 , .details 
+{
+	font-size:36px;
+	 font-family: 'Varela Round',sans-serif;
+}
+
+.blog  .glyphicon-chevron-left,
+.blog  .glyphicon-chevron-right
+{
+	background:url(img/left.png);
+	width:114px !important;
+	height:300px !important;
+    max-width:100%!important;
+}
+
+.glyphicon-chevron-right
+{
+	background:url(img/right.png)!important;
+}
+
+.blog h2 
+{
+	color:#BD2D2E !important;
+	text-align:center;
+}
+
+.details 
+{
+	clear:both;
+	background:#B62B2C;
+	color:#fff;
+	margin-bottom:22px !important;
+	font-size:36px;
+	width:100%;
+	text-align:center;
+	font-family: 'Varela Round', sans-serif;
+	float:left;
+	
+}
+
+#postCarousel img
+{
+	margin-bottom:25px !important;
+	
+}
+
+.blog .carousel-inner
+{
+	position:relative;
+}
+
+.blog .carousel-control
+{
+	width: 8% !important;
+}
+
+.blog .carousel-control.left ,
+.blog .carousel-control.right
+{
+	background:none !important;
+    max-width:100% !important;
+	margin-top:575px;
+}
+
+#postCarousel .col-md-6
+{
+	margin-bottom: 30px;
+}
+
+#blog  p
+{
+    font-size:30px;
+	clear:both;
+}
+
+
+
+.blog
+{
+	font-family: "SIMPLIFICATypeface" !important;
+}
+	  
+.blog h1
+{
+	margin:149px 0px 61px 0px;
+}	
+
+.contato ul
+{
+
+	width: 480px;
+}
+
+.social_footer_medium li
+{
+	margin: 0 9px 5px 0 ;
+}
+
+#myTab
+{
+	margin-top: 62px;
+}
+
+.leia
+{
+	background:none !important;
+	border:none !important;
+	color:#BD2D2E !important;
+	font-size:30px;
+	font-family: 'Varela Round', sans-serif;
+	cursor: pointer;
+} 
+
+li{list-style:none;}
+
+#carrossel
+{
+
+	float:left;
+	width:1490px !important
+}
+
+
+.proximo , .anterior
+{
+	margin-top:-470px;
+	cursor:pointer;
+}
+
+
+
+  /* ============================ localização */	 
+
+
+  
+.headerlocation
+{
+	color:#fff;
+	background:#BD2D2E ;
+	overflow:hidden;
+	height:558px;
+}
+.glyphicon-chevron-left,
+.glyphicon-chevron-right
+{
+	background:url(img/left.png);
+	width:114px !important;
+	height:300px !important;
+}
+
+.glyphicon-chevron-right
+{
+	background:url(img/right.png);
+}
+
+.location h1
+{
+	font-size:72px;
+	padding:50px 0px 50px 0px;
+	float:left;
+	margin-right:40px;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.location,.contato
+{
+	margin:0 auto  !important;
+	overflow: hidden;
+}
+
+  /* ============================ contato */	
+
+.bgcontato
+{
+	background:url(img/img-fundo-footer.jpg) no-repeat center;
+	overflow: hidden;
+}  
+
+.headercontato
+{
+	background:#fff;
+	overflow: hidden;
+	position:relative;
+	margin:214px 0 188px;
+    background: rgba(255, 255, 255, 0.6);
+	-moz-background: rgba(255, 255, 255, 0.6);
+	-webkit-background: rgba(255, 255, 255, 0.6);
+}
+
+.contato .span4:first-child
+{
+	margin-right:234px;
+}
+
+.contato
+{
+	font-family: 'Varela Round', sans-serif;
+	padding:61px 0px 44px 0px;
+	
+}
+  
+.contato h3
+{
+	font-size:72px;
+	color:#000;
+	margin:24px 0px 50px 0px;
+	font-family: "SIMPLIFICATypeface" !important;
+}
+
+.contato h2
+{
+	font-size:100px;
+	color:#BD2D2E;
+	
+}
+
+.contato .col-xs-12
+{
+	margin-bottom:10px;
+}
+
+.blog-post .carousel-control.left, .blog-post .carousel-control.right
+{
+	margin-top: 430px !important ;
+}
+
+
+.contato li 
+{
+	display:inline;
+	margin:0px 29px 5px 0px;
+}
+
+.wpcf7-form  input,
+.wpcf7-form  textarea
+{
+	width:100% ;
+	border: none;
+}
+
+.wpcf7-form p
+{
+	color:#000;
+	font-size: 20px;
+}
+
+.wpcf7-submit
+{
+	background:#BD2D2E;
+	color:#fff;
+	border:none;
+	height:30px;
+	text-align:center !important;
+}
+.wrapper
+{
+ padding:0px 20% 0px !important;
+}
+
+.wpcf7-form
+{
+	overflow:hidden;
+	position: relative;
+}
+
+.location p
+{
+	margin-top:74px;
+}
+
+.face
+{
+	background:#fff;
+	width:300px;
+}
+
+  /* ============================ footer */	
+
+.footer
+{
+	background:#FF8303;
+	overflow:hidden;
+	clear:both;
+	padding:5px 0px 5px 0px
+}
+
+.footer img
+{
+	float:right;
+}
