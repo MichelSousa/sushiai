@@ -2,7 +2,7 @@
    
 
    <div class="footer">
-        <p><img src="<?php bloginfo("template_url")?>/img/vi.png"></p>
+        <p><a href="http://visolutions.com.br" target="_blank"><img src="<?php bloginfo("template_url")?>/img/vi.png"></a></p>
     </div>
 
     <!-- Le javascript

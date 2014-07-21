@@ -95,7 +95,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo
 ) ) );
 
 
-//===================== Upload do logo cardápio
+//===================== Url like facebook box
 
 $wp_customize->add_section( 'sushiai_box_facebook' , array(
      'title'     => __( 'Url like facebook box', 'sushiai' ),
@@ -110,6 +110,23 @@ $wp_customize->add_control('url_like', array(
 	'label'        => __( 'url', 'sushiai' ),
 	'section'    => 'sushiai_box_facebook',
 	'settings'   => 'ur_like_facebook',
+)  );
+
+//===================== Número de telefone
+
+$wp_customize->add_section( 'sushiai_fone' , array(
+     'title'     => __( 'Número de telefone', 'sushiai' ),
+      'description'   => 'Digite o número de telefone',
+) );
+
+$wp_customize->add_setting( 'text_fone' , array(
+    'default'     => '(41) 3672-4116',
+) );
+
+$wp_customize->add_control('sushiai_fone_text', array(
+  'label'        => __( 'url', 'sushiai' ),
+  'section'    => 'sushiai_fone',
+  'settings'   => 'text_fone',
 )  );
 
 
