@@ -41,24 +41,6 @@ function gamesquare_customize_register( $wp_customize )
 {
     
 
-/*
-$wp_customize->add_section( 'gamesquare_colors' , array(
-     'title'     => __( 'Colors', 'sushiai' ),
-      'description'   => 'Configurações do tema',
-) );
-
-$wp_customize->add_setting( 'background_colors' , array(
-    'default'     => '#000000',
-) );
-
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
-	'label'        => __( 'Header Background', 'sushiai' ),
-	'section'    => 'gamesquare_colors',
-	'settings'   => 'background_colors',
-) ) );
-*/
-
-
 //===================== Upload do logotipo
 
 $wp_customize->add_section( 'sushiai_image' , array(
@@ -129,6 +111,23 @@ $wp_customize->add_control('sushiai_fone_text', array(
   'settings'   => 'text_fone',
 )  );
 
+
+//===================== Endereço
+
+$wp_customize->add_section( 'sushiai_endereco' , array(
+     'title'     => __( 'Endereço', 'sushiai' ),
+      'description'   => 'Digite o seu endereço',
+) );
+
+$wp_customize->add_setting( 'text_endereco' , array(
+    'default'     => 'Rua Lucia Madalena Strapassoni, 154 | Sala 5, Quatro Barras',
+) );
+
+$wp_customize->add_control('sushiai_endereco_text', array(
+  'label'        => __( 'url', 'sushiai' ),
+  'section'    => 'sushiai_endereco',
+  'settings'   => 'text_endereco',
+)  );
 
 }
 
