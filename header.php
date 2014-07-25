@@ -12,7 +12,7 @@
     <link href="<?php bloginfo("template_url")?>/css/carousel.css" rel="stylesheet">
 	<link href="<?php bloginfo("template_url")?>/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
@@ -32,13 +32,13 @@
 	    
      
      
-      <div style="max-width:490px;margin:40px auto">
+      <div style="max-width:490px;margin:40px auto;">
         <a href="<?php echo get_option("home")?>">
             <img  class="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12" src="<?php echo get_theme_mod("logo_image") ?>">
         </a>
       </div>  <!--  end header-left -->
 
-<div class="nav" id="social">
+<div class="" id="social">
 
       <ul class="navul col-md-10 col-lg-10 hidden-sm hidden-xs col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs">
 
@@ -46,12 +46,36 @@
 
             query_posts("showposts=10&category_name='social'");
              if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-             $url = get_post_meta($post->ID, 'url', true); 
+              $class = get_post_meta($post->ID, 'class', true); 
           ?>    
 
           <li>
             <a target="_blank" title="<?php the_title()?>" href="<?php echo $url?>">
-              <?php the_post_thumbnail('social', array('class' => 'img-responsive')); ?>
+                <style type="text/css"> 
+                      .<?php echo $class?>
+                      {
+                       
+                        background: url("<?php bloginfo('template_url')?>/img/<?php echo $class?>.png");
+                        float:left;
+                        
+                      }
+
+                       .<?php echo $class?>:hover
+                       {
+                          background: url("<?php bloginfo('template_url')?>/img/<?php echo $class?>_on.png");
+                           transform: scale(1.1);
+                 transition: all 0.5s ease 0s;
+
+                       }
+   
+                </style> 
+             
+                
+
+                  <span class="<?php echo $class?>">  </span>
+        
+        
+
             </a>
           </li>
        
@@ -68,7 +92,7 @@
 
       
 
-		 <div style="max-width:700px;margin:0 auto"> 
+		 <div style="max-width:770px;margin:0 auto;margin-bottom:10px"> 
 		 
         <div class="navbar-header">
 
@@ -85,8 +109,7 @@
         <?php  
 
            wp_nav_menu(array(
-            'menu' => 'primary',
-            'theme_location' => 'meu_menu',
+            
             'container' => 'div',
             'container_class' => 'collapse navbar-collapse',
             'container_id' => '',

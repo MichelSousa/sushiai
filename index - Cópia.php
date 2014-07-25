@@ -583,7 +583,7 @@
 							 
 					
 					
-					         $count_post4 = count(query_posts("showposts=10&category_name='cardapio-porcoes'"));
+					 $count_post4 = count(query_posts("showposts=10&category_name='cardapio-porcoes'"));
 						
 						     if($count_post4 <= 0)
 							 {
@@ -748,7 +748,45 @@
     <div class="row  blog" id="blog">
   
 	
-
+		 <script>
+		 var b= jQuery.noConflict() 
+		 
+		   b(document).ready(function(){
+		    
+			b(".leia").click(function(){
+			  
+			  var post_id = b(this).attr("id");
+			  
+			  b(".wpblog").css({display:"block"})
+			  
+			  b("#postCarousel,.setas").css({display:"none"})
+			   
+			      b.ajax({
+				  
+				  data:{post_id:post_id},
+				  url:"<?php echo get_bloginfo('template_url')?>/blog-post.php",
+				  type:"post",
+				 
+				  
+				  success:function(data){
+				  
+				      b(".wpblog").html(data);
+					  
+		
+				  }, 
+				  
+				  error:function(){
+				    alert("erro")
+				  }
+				  
+				  })
+			  })
+		   
+		     
+		   
+		   })
+		  
+		 </script>
 
 	
 <div class="container blog-post" style="max-width:1477px !important">
@@ -829,7 +867,15 @@
 		    			  <!-------------------SINGLE------------------------------>
 				  <div class="container">
 				  
-					
+					  <a  class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+						<span style="position:absolute;right:50px !important;" class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  
+					  <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					  </a>
 					  
 				  <div class="col-lg-12"> 
 
@@ -838,10 +884,7 @@
 			================================================== -->
 			
 			<div class="single" >
-					<a  class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
-						<span style="position:relative;left:-70px;" class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					  </a>
+
 			<div id="myCarousel1" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
 			 
@@ -857,23 +900,26 @@
 						 ?>
 						  
 
-								<div class="item">
-								  <div class="container">
-									<h1><?php the_title();?></h1>
-									   <?php the_post_thumbnail('blog-single'); ?>
-										   
-											<?php the_content()?>
-									  
-									   <span> 
-											<img title="Clica aqui para voltar" 
-												 style="position:relative;top:0;" 
-												 class="img-responsive voltar"  
-												 alt="img-exemple" 
-												 src="<?php bloginfo("template_url")?>/img/voltar.png">
-									   </span>
-									
-								   </div><!-- /.FIM ITEM -->
-								</div> <!-- /.FIM ITEM -->
+							<div class="item">
+							  <div class="container">
+								<h1><?php the_title();?></h1>
+								  <img class="attachment-blog wp-post-image"  
+									   style="text-align:center;width:479px !important;height:215px !important" 
+									   alt="img-exemple" 
+									   src="http://127.0.0.1/wordpress/wp-content/uploads/2014/07/img-exemple.png">
+									   
+								  <p><?php the_content()?></p>
+								  
+								   <span> 
+										<img title="voltar" 
+											 style="position:relative;top:0;" 
+											 class="img-responsive voltar"  
+											 alt="img-exemple" 
+											 src="<?php echo $url?>/sushiai/wp-content/themes/sushiai/img/voltar.png">
+								   </span>
+								
+							   </div><!-- /.FIM ITEM -->
+							</div> <!-- /.FIM ITEM -->
 					
 					  <?php endwhile;else : ?>
 					 <?php endif; ?>
@@ -882,19 +928,28 @@
 								
 								
 							  </div>
-							
-					  
-					  <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					  </a>
 							 
 			   </div><!-- /.carousel -->
 			 </div><!-- /.single -->
 	       </div>
          </div>	
 <!-----------------------BLOG------------------------->
-
+			<script>
+			
+			 var v= jQuery.noConflict() 
+					 
+					   v(document).ready(function(){
+						 b(".single .item:first-child").attr("class","item active");	
+						 
+						 
+					   v(".voltar").click(function(){
+                       b("#postCarousel,.setas").css({display:"block"})
+				       b(".wpblog").css({display:"none"})
+			       })
+						 
+					})	 
+					
+			</script>
 		
 			</div>
 			
@@ -927,7 +982,7 @@
 	  <div class="location">
 	   <div class="container" style="max-width:1477px !important">
 		 <h1>LOCALIZAÇÃO</h1>
-		<p><?php echo get_theme_mod("text_endereco") ?> </p> 
+		<p>Rua Lucia Madalena Strapassoni, 154 | Sala 5, Quatro Barras</p> 
 	  </div>	
 	 </div><!-- endcontainer -->	  
 	   <?php query_posts("showposts=1&category_name=mapa")?>

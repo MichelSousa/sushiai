@@ -12,6 +12,11 @@ list-style:none;
 vertical-align:baseline;
 }
 
+.menu
+{
+	margin-top: 15px;
+}
+
 body
 {
 margin:0;
@@ -53,15 +58,66 @@ background:#CFCFCF url(img/textura2.png) ;
 	text-align:left;
 }
 
+
+
+.single img 
+{
+	float: left;
+}
+
+.single h1 
+{
+	color: #BD2D2E !important;
+	font-size: 36px;
+	text-align: center;
+	margin: 30px 0px 0px  0px !important;
+}
+
+
+
+
+.single .carousel-control:hover .glyphicon-chevron-right:hover,
+.single .carousel-control.right:hover
+{
+	background: none !important;
+}
+.single p
+{
+
+	font-size: 30px;
+	margin-left: 10px;
+	float: left;
+	width: 530px;
+	clear: none !important; 
+
+}
+
+.single span
+{
+
+	margin-right: 60px;
+	float: right;
+	clear: none !important; 
+	margin-top: 10px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+
+.single .item .thumb img, .item img {
+	width: none !important; 
+
+}
+
 .navbar-toggle
 {
 	position:relative;
 	z-index:3;
 }
       .navbar .nav li a {
-        font-weight: bold;
+      
      
-		font-family: "SIMPLIFICATypeface" !important;
+		font-family: 'Open Sans Condensed', sans-serif  !important;
 		-moz-transition:all 1s;
 	    -webkit-transition:all 1s;
 		transition:all 1s;
@@ -75,15 +131,11 @@ background:#CFCFCF url(img/textura2.png) ;
         border-radius: 0 3px 3px 0;
       }
 	  
-	  
-@font-face {
-	font-family: "SIMPLIFICATypeface";
-	src: url("fonte/SIMPLIFICATypeface.ttf");
-	}
+
 
 /* ============================ TOPO*/		
 	  
-.nav > li > a {
+.nav   li  a {
     font-size:36px;
 }
 
@@ -118,12 +170,13 @@ background:#CFCFCF url(img/textura2.png) ;
 {
    list-style:none;	
    margin:0px 0px 20px 0px;
+   float: right;
 }
 
 #social
 {
    float:right;
-   margin:0px 25px 0px 0px;
+   margin:0px 0px 0px 0px;
 }
 
 #menu-menu
@@ -144,22 +197,26 @@ background:#CFCFCF url(img/textura2.png) ;
 
 .slide  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
 {
-	position: absolute !important;
-    top: 20% !important;
+	position: absolute ;
+    top: 24% ;
     left: -130px;
+    z-index: 10;
 }
 
 .slide  .carousel-control .icon-prev, .carousel-control .icon-next 
 {
-	position: absolute !important;
+	position: absolute ;
     top: 20% ;
     right: -130px;
+     z-index: 10;
 }
 
 .slide .carousel-control .glyphicon-chevron-right
 {
-	position: absolute !important;
+	position: absolute ;
 	left:30px;
+	
+	 z-index: 10;
 }
 
 .carousel-caption h4
@@ -240,8 +297,8 @@ background:#CFCFCF url(img/textura2.png) ;
 {
     background: #999999  !important;
 	font-size:36px  !important;
-	font-family: "SIMPLIFICATypeface" !important;
-	margin-right:18px;
+	font-family: 'Open Sans Condensed', sans-serif !important;
+	 margin-right: 15px;
 }
 
 .tabs-center 
@@ -250,7 +307,7 @@ background:#CFCFCF url(img/textura2.png) ;
 	margin-bottom:124px;
 	margin-top:98px;
 	overflow:hidden;
-	font-family: "SIMPLIFICATypeface" !important;
+	font-family: 'Open Sans Condensed', sans-serif !important;
 }
 .tabs-center  img 
 {
@@ -277,7 +334,7 @@ background:#CFCFCF url(img/textura2.png) ;
 	 text-align: center;
 }
 
-.post
+.tabs-center .col-lg-4
 {
 	transition: all 1s ease 0s;
 	-moz-transition: all 1s ease 0s;
@@ -285,13 +342,10 @@ background:#CFCFCF url(img/textura2.png) ;
 	margin-bottom: 24px;
     overflow: hidden;
 	padding:10px;
-	clear:both;
+
 }
 
-.post:hover
-{
- background:#362F2F;
-}
+
 
 .bt .col-lg-2,
 .bt .col-lg-4,
@@ -312,10 +366,12 @@ background:#CFCFCF url(img/textura2.png) ;
 
 .tabs-center h2
 {
-   max-width: 185px !important;
-   float:left;
-   margin:0;
-   
+
+   float: left;
+    margin: 0;
+    width: 90px;
+    word-wrap: break-word;
+    text-align: left;
 }
 
 .tabs-center .col-lg-6
@@ -342,8 +398,19 @@ background:#CFCFCF url(img/textura2.png) ;
 		-moz-border-radius: 8px 8px 8px 8px;
 	    -webkit-border-radius: 8px 8px 8px 8px;
 		border-radius: 8px 8px 8px 8px;
+		
 				
 }		
+
+.tabs-center img:hover
+{
+	    -moz-transform: scale(1.1);
+	    -webkit-transform: scale(1.1);
+	    transform: scale(1.1);
+        transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+}
 
 .price
 {
@@ -383,7 +450,8 @@ background:#CFCFCF url(img/textura2.png) ;
 	background:url(img/left.png);
 	width:114px !important;
 	height:300px !important;
-    max-width:100%!important;
+	margin-left: 150px;
+
 }
 
 .glyphicon-chevron-right
@@ -440,6 +508,12 @@ background:#CFCFCF url(img/textura2.png) ;
 	margin-bottom: 30px;
 }
 
+#postCarousel  .carousel-inner
+{
+	   margin-bottom:184px !important;
+	   float: left;
+}
+
 #blog  p
 {
     font-size:30px;
@@ -450,7 +524,7 @@ background:#CFCFCF url(img/textura2.png) ;
 
 .blog
 {
-	font-family: "SIMPLIFICATypeface" !important;
+	font-family: 'Open Sans Condensed', sans-serif !important;
 }
 	  
 .blog h1
@@ -462,6 +536,8 @@ background:#CFCFCF url(img/textura2.png) ;
 {
 
 	width: 480px;
+	float: left;
+
 }
 
 .social_footer_medium li
@@ -513,17 +589,83 @@ li{list-style:none;}
 	overflow:hidden;
 	height:558px;
 }
-.glyphicon-chevron-left,
-.glyphicon-chevron-right
+.slide  .glyphicon-chevron-left,
+ .slide .glyphicon-chevron-right,
+ .single .glyphicon-chevron-left,
+.single .glyphicon-chevron-right
 {
-	background:url(img/left.png);
-	width:114px !important;
+	background:url(img/left.png) no-repeat !important;
+	width:144px !important;
 	height:300px !important;
 }
 
-.glyphicon-chevron-right
+ .single .glyphicon-chevron-left,
+.single .glyphicon-chevron-right
+{ 	
+	position: relative;
+	top:-170px;
+	left: -190px ;
+}
+
+
+.post
 {
-	background:url(img/right.png);
+	clear: both;
+	margin-bottom: 44px;
+	overflow: hidden;
+	padding: 10px;
+	-webkit-transition: all 1s ease 0s;		
+	 -moz-transition: all 1s ease 0s;
+	 transition: all 1s ease 0s;
+
+}
+.tabs-center .post ,.tabs-center .hover
+{
+	-webkit-transition: all 1s ease 0s;		
+	 -moz-transition: all 1s ease 0s;
+	 transition: all 1s ease 0s;
+}
+
+.tabs-center .post:hover,.tabs-center .hover:hover
+{
+ background:#362F2F;
+}
+
+
+.slide  .glyphicon-chevron-right,.single  .glyphicon-chevron-right
+{
+	background:url(img/right.png) no-repeat !important;
+}
+
+.slide .carousel-control:hover .glyphicon-chevron-right:hover,
+.blog:hover  .carousel-control:hover .glyphicon-chevron-right:hover
+{
+  background: url("img/right-hover.png") no-repeat !important;
+  position: absolute;
+  z-index: 10;
+  
+}
+
+
+.slide .carousel-control:hover .glyphicon-chevron-left:hover,
+.blog:hover  .carousel-control:hover .glyphicon-chevron-left:hover
+{
+  background: url("img/left-hover.png") no-repeat !important;
+  position: absolute;
+  z-index: 10;
+
+}
+
+.blog:hover  .carousel-control:hover .glyphicon-chevron-left:hover
+{
+	width:174px !important;
+	height:300px !important;
+}
+
+.blog:hover  .carousel-control:hover .glyphicon-chevron-right:hover
+{
+	width:174px !important;
+	height:300px !important;
 }
 
 .location h1
@@ -577,13 +719,14 @@ li{list-style:none;}
 	font-size:72px;
 	color:#000;
 	margin:24px 0px 50px 0px;
-	font-family: "SIMPLIFICATypeface" !important;
+	font-family: 'Open Sans Condensed', sans-serif  !important;
 }
 
 .contato h2
 {
 	font-size:100px;
 	color:#BD2D2E;
+	word-wrap:break-word;
 	
 }
 
@@ -602,6 +745,7 @@ li{list-style:none;}
 {
 	display:inline;
 	margin:0px 29px 5px 0px;
+	float: left;
 }
 
 .wpcf7-form  input,
@@ -609,7 +753,11 @@ li{list-style:none;}
 {
 	width:100% ;
 	border: none;
+	 color: #929292;
+    padding:5px;
 }
+
+.
 
 .wpcf7-form p
 {
@@ -620,7 +768,7 @@ li{list-style:none;}
 .wpcf7-submit
 {
 	background:#BD2D2E;
-	color:#fff;
+	color:#fff !important;
 	border:none;
 	height:30px;
 	text-align:center !important;
@@ -639,12 +787,15 @@ li{list-style:none;}
 .location p
 {
 	margin-top:94px;
+	font-family: 'Open Sans Condensed', sans-serif !important;
+	font-size: 30px;
 }
 
 .face
 {
 	background:#fff;
 	width:300px;
+	clear: both;
 }
 
   /* ============================ footer */	
@@ -660,4 +811,41 @@ li{list-style:none;}
 .footer img
 {
 	float:right;
+}
+
+
+.foursquare
+{
+	 width: 160px;
+	height: 45px;
+}
+
+.tripadvisor
+{
+	 width: 164px;
+	height: 35px;
+}
+
+
+.facebook
+{
+	 width: 31px;
+	height: 60px;
+}
+
+.instagram
+{
+	 width:60px;
+	height: 60px;
+}
+
+.icon_foursquare 
+{
+	width: 40px;
+	height: 40px
+}
+.icon_tripadvisor
+{
+	width: 40px;
+	height: 24px
 }

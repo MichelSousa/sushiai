@@ -1,0 +1,85 @@
+
+
+
+
+
+ 
+#filters {
+	margin:1%;
+	padding:0;
+	list-style:none;
+}
+
+	#filters li {
+		float:left;
+	}
+	
+	#filters li span {
+		display: block;
+		padding:5px 20px;		
+		text-decoration:none;
+
+		cursor: pointer;
+	}
+	
+	#filters li span.active {
+
+	}
+ 
+
+ 
+#portfoliolist .portfolio {
+	
+	-o-box-sizing: border-box;
+	width:100.3333%;
+	margin:1%;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+
+
+	
+	
+	
+
+
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container {
+		width: 768px; 
+	}
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.container { 
+		width: 95%; 
+	}
+	
+	#portfoliolist .portfolio {
+		width:48%;
+		margin:1%;
+	}		
+
+	#ads {
+		display:none;
+	}
+	
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container {
+		width: 70%;
+	}
+	
+	#ads {
+		display:none;
+	}
+	
+}
+
