@@ -171,6 +171,7 @@ background:#CFCFCF url(img/textura2.png) ;
    list-style:none;	
    margin:0px 0px 20px 0px;
    float: right;
+   clear: both;
 }
 
 #social
@@ -590,7 +591,7 @@ li{list-style:none;}
 	color:#fff;
 	background:#BD2D2E ;
 	overflow:hidden;
-	height:558px;
+	height:539px;
 }
 .slide  .glyphicon-chevron-left,
  .slide .glyphicon-chevron-right,
@@ -817,23 +818,37 @@ li{list-style:none;}
 	
 }
 
-.footer img:hover
+.footer img:hover,.bt img:hover
 {
     transform: scale(1.1);
     transition: all 0.5s ease 0s;
 }
 
 
+#img-miniatura
+{
+	width: 100% !important;
+	height: 215px !important;
+}
+
 .foursquare
 {
-	 width: 160px;
-	height: 45px;
+	 width: 65px;
+	height: 65px;
 }
 
 .tripadvisor
 {
-	 width: 164px;
-	height: 35px;
+	 width: 83px;
+	height: 49px;
+}
+
+
+
+.email
+{
+	 width: 70px;
+	height: 52px;
 }
 
 
@@ -849,13 +864,28 @@ li{list-style:none;}
 	height: 60px;
 }
 
+.icon_facebook,
+.icon_instagram,
 .icon_foursquare 
 {
 	width: 40px;
 	height: 40px
 }
+
 .icon_tripadvisor
 {
 	width: 40px;
 	height: 24px
+}
+
+.social_footer
+{
+	margin-top: 10px;
+}
+
+.social_footer ul
+{
+	float: left;
+	padding: 0 !important;
+	float:left;
 }

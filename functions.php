@@ -3,15 +3,15 @@ if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
 
-// additional image sizes
-// delete the next line if you do not need additional image sizes
-add_image_size( 'blog', null,null); //300 pixels wide (a
-add_image_size( 'cardapio', 150, 150 ); //300 pixels wide (a
-add_image_size( 'slide', 1005, 495 ); //300 pixels wide (a
-add_image_size( 'social', 40, 40 ); //300 pixels wide (a
-add_image_size( 'social-mini', 60, 60 ); //300 pixels wide (a
-add_image_size( 'social-medium', 160, 45 ); //300 pixels wide (a
-add_image_size( 'blog-single', 476,215); //300 pixels wide (a
+
+add_image_size( 'blog', null,null); 
+add_image_size( 'cardapio', 150, 150 ); 
+add_image_size( 'slide', 1005, 495 ); 
+add_image_size( 'social', 40, 40 ); 
+add_image_size( 'social-mini', 60, 60 ); 
+add_image_size( 'social-medium', 160, 45 ); 
+add_image_size( 'blog-single', 476,215);
+add_image_size( 'minuatura', 479,215); 
 
 if ( function_exists( 'register_nav_menu' ) ) {
 register_nav_menu( 'primary', 'Este é meu primeiro menu' );

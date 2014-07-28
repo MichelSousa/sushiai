@@ -32,22 +32,30 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
+
+      	<?php query_posts("showposts=10&category_name=miniatura")?>
+	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	           
+				  <?php $url = get_post_meta($post->ID, 'url', true); ?>
+
         <div class="col-lg-6">
-         <img class="" src="<?php bloginfo("template_url")?>/img/banner2pequeno.png" alt="Generic placeholder image" style="width:100%; height: 215px;">
-        
+                 
+			         <a href="<?php echo $url?>">
+			         	   <?php the_post_thumbnail('minuatura', array('id' => 'img-miniatura')); ?> 
+			         </a>
          
           
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-6">
-          <img class="" src="<?php bloginfo("template_url")?>/img/banner3pequeno.png" style="width:100%; height: 215px;">
-         
-        </div><!-- /.col-lg-4 -->
+
+        <?php endwhile;else : ?>
+			 <?php endif; ?>
+      
         
       </div><!-- /.row -->
 
  </div><!-- /.marketing   -->
-	 
-	 
+
+
 	 
 	 
   </div>
@@ -154,9 +162,9 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
-				     <h2><?php the_title(); ?></h2>
+				     <h2 class="col-sx col-sm col-lg col-sx"><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
 						<div class="price">
 						   <?php echo $price ?>
@@ -223,7 +231,7 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
 				     <h2><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
@@ -332,7 +340,7 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
 				     <h2><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
@@ -439,7 +447,7 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
 				     <h2><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
@@ -552,7 +560,7 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
 				     <h2><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
@@ -664,7 +672,7 @@
 	              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			      <div class="post">
 					<div class="col-lg-6">
-					  <?php the_post_thumbnail('cardapio', array('class' => 'img-responsive')); ?> 
+					  <?php the_post_thumbnail('cardapio', array('class' => 'col-sx col-sm col-lg col-sx img-responsive')); ?> 
 					</div>  
 				     <h2><?php the_title(); ?></h2>
 				         <?php $price = get_post_meta($post->ID, 'price', true); ?>
@@ -947,7 +955,31 @@
 		    <h2>CONTATO</h2>
 			<h3><?php echo get_theme_mod("text_fone") ?></h3>
 
-		     <ul>
+		     
+			
+			 
+			
+			<div class="face">
+			   <div class="fb-like-box" data-href="<?php echo get_theme_mod("ur_like_facebook") ?>" data-width="300" data-height="240" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+			</div><!-- end face -->
+			
+		  </div><!-- end wrapper -->	
+		 </div><!-- end col-xs-12 col-sm-6 col-md-6 -->
+		 
+		 	
+	
+	  
+	  	<div class="col-xs-12 col-sm-6 col-md-6">
+		
+		  <?php query_posts("category_name=contato")?>
+	      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		  <?php the_content(); ?>
+		  <?php endwhile;else : ?>
+          <?php endif; ?>
+	    
+
+         <div class="social_footer">
+ 			 <ul>
 			   <?php
 
             query_posts("showposts=10&category_name='social_footer_min'");
@@ -997,79 +1029,9 @@
            endif; 
 
               ?>
-			</ul>
 			
-			
-			 <ul>
-			   <?php
+         </div>
 
-            query_posts("showposts=10&category_name='social_footer_medium'");
-             if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-             $url = get_post_meta($post->ID, 'url', true); 
-             $class = get_post_meta($post->ID, 'class', true); 
-          ?>  
-
-
-       
-		  <li>
-            <a target="_blank" title="<?php the_title()?>"  href="<?php echo $url?>">
-
-            	
-
-                <style> 
-                      .<?php echo $class?>
-                      {
-                       
-                        background: url("<?php bloginfo('template_url')?>/img/<?php echo $class?>_off.png");
-                        float:left;
-                        
-                      }
-
-                       .<?php echo $class?>:hover
-                       {
-                       	  background: url("<?php bloginfo('template_url')?>/img/<?php echo $class?>_on.png");
-                       	   transform: scale(1.1);
-   						   transition: all 0.5s ease 0s;
-
-                       }
-   
-                </style> 
-                
-                
-
-                  <span class="<?php echo $class?>"></span>
- 				
-            </a>
-          </li>
-        
-  
-
-            <?php 
-          
-           endwhile;else :  ;
-           endif; 
-
-              ?>
-			</ul>
-			
-			<div class="face">
-			   <div class="fb-like-box" data-href="<?php echo get_theme_mod("ur_like_facebook") ?>" data-width="300" data-height="240" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-			</div><!-- end face -->
-			
-		  </div><!-- end wrapper -->	
-		 </div><!-- end col-xs-12 col-sm-6 col-md-6 -->
-		 
-		 	
-	
-	  
-	  	<div class="col-xs-12 col-sm-6 col-md-6">
-		 <div class="wrapperxxx">
-		  <?php query_posts("category_name=contato")?>
-	      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		  <?php the_content(); ?>
-		  <?php endwhile;else : ?>
-          <?php endif; ?>
-		 </div> 
 		</div> 
 	  
 	

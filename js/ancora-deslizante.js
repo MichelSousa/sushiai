@@ -4,7 +4,7 @@ var j= jQuery.noConflict()
 	
     j(function(){
     //chama a função de scroll
-    navegation(j('ul.menu a'),0);
+    navegation(j('ul.menu a,.bt a'),0);
     });
      
     //função para o scroll do menu
