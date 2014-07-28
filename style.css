@@ -482,6 +482,9 @@ background:#CFCFCF url(img/textura2.png) ;
 #postCarousel img
 {
 	margin-bottom:25px !important;
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
 	
 }
 
@@ -492,7 +495,7 @@ background:#CFCFCF url(img/textura2.png) ;
 
 .blog .carousel-control
 {
-	width: 8% !important;
+	width: 10% !important;
 }
 
 .blog .carousel-control.left ,
